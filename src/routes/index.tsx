@@ -13,7 +13,7 @@ const WHATSAPP = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   "Hello, I'd like to talk about a website for my business.",
 )}`;
 
-const TITLE = "Bader Kchin — Freelance Web Designer for Restaurants & Hospitality";
+const TITLE = "NEXORA Studio — Web Design for Restaurants, Hotels & Small Businesses";
 const DESCRIPTION =
   "Independent web design studio creating premium, mobile-friendly websites for restaurants, hotels, barbershops and small businesses. Browse demo concepts and get in touch.";
 
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Bader Kchin Studio" },
+      { property: "og:site_name", content: "NEXORA Studio" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
@@ -190,7 +190,7 @@ function Index() {
             className="font-display text-2xl tracking-wide"
             onClick={() => setOpen(false)}
           >
-            Bader <span className="italic text-gold">Kchin</span>
+            NEXORA <span className="italic text-gold">Studio</span>
           </a>
           <nav aria-label="Primary" className="hidden gap-10 text-sm text-muted-foreground md:flex">
             {nav.map(([l, h]) => (
@@ -536,7 +536,7 @@ function Index() {
       <footer className="border-t border-border px-5 py-10 sm:px-6">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 text-xs text-muted-foreground md:flex-row md:items-center">
           <span className="font-display text-lg text-foreground">
-            Bader <span className="italic text-gold">Kchin</span>
+            NEXORA <span className="italic text-gold">Studio</span>
           </span>
           <nav aria-label="Footer" className="flex flex-wrap gap-x-6 gap-y-2">
             {nav.map(([l, h]) => (
