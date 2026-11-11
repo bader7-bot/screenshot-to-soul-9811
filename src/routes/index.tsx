@@ -27,9 +27,9 @@ const nav = [
 ] as const;
 
 const projects = [
-  { n: "01", name: "KURO", cat: "Japanese Restaurant Website", desc: "A premium Japanese restaurant website featuring elegant typography, immersive food photography and a refined dark aesthetic.", url: "https://preview--screenshot-to-screen-94.lovable.app/" },
-  { n: "02", name: "EL BRIJA – GOLDEN TABLE", cat: "Luxury Tunisian Restaurant Website", desc: "An elegant restaurant website inspired by Tunisian architecture, warm lighting and premium dining experiences.", url: "https://preview--el-brija-golden-table.lovable.app/" },
-  { n: "03", name: "LA DAURADE", cat: "Mediterranean Seafood Restaurant Website", desc: "A Mediterranean restaurant concept inspired by Port El Kantaoui, combining beautiful marina photography with an elegant dining experience.", url: "https://preview--pixel-perfect-replica-6062.lovable.app/" },
+  { n: "01", name: "KURO", cat: "Restaurant Website Design", desc: "Luxury Japanese restaurant website with elegant typography and immersive sushi photography.", url: "https://preview--screenshot-to-screen-94.lovable.app/", shot: null as string | null },
+  { n: "02", name: "EL BRIJA – GOLDEN TABLE", cat: "Restaurant Website Design", desc: "Premium Tunisian restaurant website with sophisticated golden aesthetics and traditional architecture.", url: "https://preview--el-brija-golden-table.lovable.app/", shot: null as string | null },
+  { n: "03", name: "LA DAURADE", cat: "Seafood Restaurant Website", desc: "Mediterranean restaurant website inspired by Port El Kantaoui and its beautiful marina.", url: "https://preview--pixel-perfect-replica-6062.lovable.app/", shot: null as string | null },
 ];
 
 const services = [
