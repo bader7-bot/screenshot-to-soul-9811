@@ -82,7 +82,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "theme-color", content: "#020618" },
-      { title: "Bader Kchin Studio — Web Design" },
+      { title: "NEXORA Studio — Web Design" },
       {
         name: "description",
         content: "Premium websites for restaurants, hospitality and modern businesses.",
