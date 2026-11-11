@@ -161,7 +161,10 @@
 }
 
 html { scroll-behavior: smooth; }
-body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+::selection { background: var(--gold); color: var(--primary-foreground); }
 
 @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 @utility animate-rise { animation: rise 1s cubic-bezier(.2,.7,.2,1) both; }
@@ -170,7 +173,22 @@ body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
   transition: opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1);
   &.is-visible { opacity: 1; transform: none; }
 }
+@keyframes menu-in { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+@utility animate-menu { animation: menu-in .35s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes page-in { from { opacity: 0; } to { opacity: 1; } }
+@utility page-enter { animation: page-in .8s ease both; }
 @utility hairline { background: linear-gradient(90deg, transparent, var(--gold), transparent); height: 1px; }
 @utility grain-bg {
   background-image: radial-gradient(ellipse at 70% 0%, var(--gold-soft), transparent 60%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: .01ms !important;
+    transition-delay: 0ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
 }
