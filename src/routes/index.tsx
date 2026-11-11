@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type FormEvent } from "react";
+import kuroShot from "@/assets/kuro-screenshot.png.asset.json";
+import elBrijaShot from "@/assets/el-brija-screenshot.png.asset.json";
+import laDauradeShot from "@/assets/la-daurade-screenshot.png.asset.json";
 
 const WHATSAPP = "https://wa.me/21600000000"; // TODO: replace with real number
 const EMAIL = "hello@example.com"; // TODO: replace with real email
@@ -27,9 +30,9 @@ const nav = [
 ] as const;
 
 const projects = [
-  { n: "01", name: "KURO", cat: "Restaurant Website Design", desc: "Luxury Japanese restaurant website with elegant typography and immersive sushi photography.", url: "https://preview--screenshot-to-screen-94.lovable.app/", shot: null as string | null },
-  { n: "02", name: "EL BRIJA – GOLDEN TABLE", cat: "Restaurant Website Design", desc: "Premium Tunisian restaurant website with sophisticated golden aesthetics and traditional architecture.", url: "https://preview--el-brija-golden-table.lovable.app/", shot: null as string | null },
-  { n: "03", name: "LA DAURADE", cat: "Seafood Restaurant Website", desc: "Mediterranean restaurant website inspired by Port El Kantaoui and its beautiful marina.", url: "https://preview--pixel-perfect-replica-6062.lovable.app/", shot: null as string | null },
+  { n: "01", name: "KURO", cat: "Restaurant Website Design", desc: "Luxury Japanese restaurant website with elegant typography and immersive sushi photography.", url: "https://preview--screenshot-to-screen-94.lovable.app/", shot: kuroShot.url },
+  { n: "02", name: "EL BRIJA – GOLDEN TABLE", cat: "Restaurant Website Design", desc: "Premium Tunisian restaurant website with sophisticated golden aesthetics and traditional architecture.", url: "https://preview--el-brija-golden-table.lovable.app/", shot: elBrijaShot.url },
+  { n: "03", name: "LA DAURADE", cat: "Seafood Restaurant Website", desc: "Mediterranean restaurant website inspired by Port El Kantaoui and its beautiful marina.", url: "https://preview--pixel-perfect-replica-6062.lovable.app/", shot: laDauradeShot.url },
 ];
 
 const services = [
