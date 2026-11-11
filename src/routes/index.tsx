@@ -146,7 +146,11 @@ function Index() {
                   {p.shot ? (
                     <img src={p.shot} alt={`${p.name} website screenshot`} loading="lazy" className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-1000 group-hover:scale-105" />
                   ) : (
-                    <iframe src={p.url} title={`${p.name} preview`} loading="lazy" tabIndex={-1} className="pointer-events-none absolute left-0 top-0 h-[250%] w-[250%] origin-top-left scale-[0.4] transition-transform duration-1000 group-hover:scale-[0.42]" />
+                    <div className="grain-bg absolute inset-0 flex flex-col items-center justify-center gap-4 transition-transform duration-1000 group-hover:scale-105">
+                      <span className="font-display text-7xl italic text-gold/30 sm:text-8xl">{p.n}</span>
+                      <span className="max-w-[70%] text-center font-display text-2xl tracking-wide text-foreground/70 sm:text-3xl">{p.name}</span>
+                      <span className="h-px w-16 bg-gold/40" />
+                    </div>
                   )}
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/40 to-transparent opacity-60 transition-opacity duration-700 group-hover:opacity-0" />
                   <span className="absolute left-4 top-4 bg-background/80 px-3 py-1 text-[10px] uppercase tracking-[0.25em] text-gold backdrop-blur">Demo Concept</span>
