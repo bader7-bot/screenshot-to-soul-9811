@@ -139,24 +139,28 @@ function Index() {
             </div>
             <p className="max-w-sm text-sm text-muted-foreground">These are independent demo concepts designed to showcase my approach — not commissioned client work.</p>
           </div>
-          <div className="mt-20 space-y-28">
+          <div className="mt-20 space-y-24 md:space-y-32">
             {projects.map((p, i) => (
-              <a key={p.n} href={p.url} target="_blank" rel="noopener noreferrer" className={`reveal group grid items-center gap-10 md:grid-cols-12`}>
-                <div className={`relative aspect-[16/10] overflow-hidden border border-border bg-card md:col-span-7 ${i % 2 ? "md:order-2" : ""}`}>
-                  <iframe src={p.url} title={`${p.name} preview`} loading="lazy" tabIndex={-1} className="pointer-events-none absolute left-0 top-0 h-[250%] w-[250%] origin-top-left scale-[0.4] transition-transform duration-1000 group-hover:scale-[0.42]" />
-                  <div className="absolute inset-0 bg-background/10 transition-colors group-hover:bg-transparent" />
+              <article key={p.n} className="reveal group grid items-center gap-10 md:grid-cols-12">
+                <div className={`relative aspect-[16/10] overflow-hidden border border-border bg-card shadow-[0_30px_80px_-30px] shadow-black/60 transition-all duration-700 group-hover:-translate-y-2 group-hover:border-gold/40 md:col-span-7 ${i % 2 ? "md:order-2" : ""}`}>
+                  {p.shot ? (
+                    <img src={p.shot} alt={`${p.name} website screenshot`} loading="lazy" className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-1000 group-hover:scale-105" />
+                  ) : (
+                    <iframe src={p.url} title={`${p.name} preview`} loading="lazy" tabIndex={-1} className="pointer-events-none absolute left-0 top-0 h-[250%] w-[250%] origin-top-left scale-[0.4] transition-transform duration-1000 group-hover:scale-[0.42]" />
+                  )}
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/40 to-transparent opacity-60 transition-opacity duration-700 group-hover:opacity-0" />
                   <span className="absolute left-4 top-4 bg-background/80 px-3 py-1 text-[10px] uppercase tracking-[0.25em] text-gold backdrop-blur">Demo Concept</span>
                 </div>
                 <div className="md:col-span-5">
-                  <span className="font-display text-6xl text-gold/40">{p.n}</span>
+                  <span className="font-display text-6xl text-gold/40 transition-colors duration-500 group-hover:text-gold/70">{p.n}</span>
                   <p className="mt-4 text-xs uppercase tracking-[0.3em] text-gold">{p.cat}</p>
-                  <h3 className="mt-3 font-display text-4xl transition-colors group-hover:text-gold sm:text-5xl">{p.name}</h3>
+                  <h3 className="mt-3 font-display text-4xl transition-colors duration-500 group-hover:text-gold sm:text-5xl">{p.name}</h3>
                   <p className="mt-5 font-light leading-relaxed text-muted-foreground">{p.desc}</p>
-                  <span className="mt-8 inline-flex items-center gap-3 text-xs uppercase tracking-[0.25em]">
-                    View live preview <span className="transition-transform group-hover:translate-x-2">→</span>
-                  </span>
+                  <a href={p.url} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-3 border border-gold/60 px-6 py-3 text-xs uppercase tracking-[0.25em] text-gold transition-all duration-500 hover:-translate-y-0.5 hover:bg-gold hover:text-primary-foreground">
+                    View Live Website <span aria-hidden>↗</span>
+                  </a>
                 </div>
-              </a>
+              </article>
             ))}
           </div>
         </div>
